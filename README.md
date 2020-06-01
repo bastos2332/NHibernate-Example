@@ -17,7 +17,7 @@ Para utilizá-lo você procisará realizar a instalação dos seguintes pacocote
 </hibernate-configuration>
 ```
 2. Alterar a propriedade do arquivo para que o mesmo sempre seja copiado no output:
-![Imagem janela de propiredades do arquivo XLM](https://octodex.github.com/images/yaktocat.png)
+![Imagem janela de propiredades do arquivo XLM](https://github.com/bastos2332/NHibernate-Example/blob/master/copy.png)
 
 3. Criar a classe de Helper do Hibernate:
 ```csharp
@@ -62,7 +62,7 @@ public class Usuario
 </hibernate-mapping>
 ```
 7. Configurar o aquivo de configuração de mapeamento para que o mesmo seja um recurso inserido em tempo de comppilação:
-![Imagem janela de propiredades do arquivo XLM](https://octodex.github.com/images/yaktocat.png)
+![Imagem janela de propiredades do arquivo XLM](https://github.com/bastos2332/NHibernate-Example/blob/master/enbebed.png)
 
 7. Código para gerar o Schemma de banco de dados.
 ```csharp
