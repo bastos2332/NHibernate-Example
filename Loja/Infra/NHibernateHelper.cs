@@ -1,4 +1,5 @@
-﻿using NHibernate.Cfg;
+﻿using NHibernate;
+using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,15 @@ namespace Loja.Infra
 {
     class NHibernateHelper
     {
-        public static Configuration RecuperarConfiguracao ()
+
+        private static ISessionFactory Fabrica = CriarSessionFactory();
+        private static ISessionFactory CriarSessionFactory()
+        {
+            Configuration cfg = RecuperarConfiguracao();
+            return cfg.BuildSessionFactory();
+        }
+
+        public static Configuration RecuperarConfiguracao()
         {
             Configuration cfg = new Configuration();
             cfg.Configure();
@@ -23,6 +32,11 @@ namespace Loja.Infra
         {
             Configuration cfg = RecuperarConfiguracao();
             new SchemaExport(cfg).Create(true, true);
+        }
+
+        public static ISession AbreSESSION()
+        {
+            return Fabrica.OpenSession();
         }
     }
 }

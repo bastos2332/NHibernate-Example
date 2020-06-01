@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Infra\NHibernateHelper.cs" />
     <Compile Include="Program.cs" />
